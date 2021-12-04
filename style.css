@@ -1,0 +1,171 @@
+body {
+  background: linear-gradient( 180deg, rgb(175, 103, 233),40%, rgb(101, 101, 231));
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 13px;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  width: 900px;
+  height: 500px;
+  border-radius: 25px;
+  margin: 120px auto;
+  display: flex;
+  overflow: hidden;
+}
+/* --------------------------------Images-------------------------------------*/
+.desktop {
+  position: relative;
+  right: 80px;
+  top: 80px;
+  z-index: 2;
+}
+.mobile-desktop{
+  display: none;
+}
+.box {
+  position:absolute;
+  left: 217px;
+  top: 317px;
+  z-index: 3
+}
+
+.bg-pattern {
+  position: relative;
+ top:-650px;
+ left:-574px;
+ z-index: 1;
+}
+.image{
+  overflow:hidden;
+  width: 450px;
+}
+/* --------------------------------Content------------------------------------*/
+.content {
+  margin: 50px 30px;
+}
+
+.query {
+  color:rgb(74, 75, 94);
+  cursor: pointer;
+  margin: 0 20px 20px 0;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+.query p:first-child {
+  display: inline;
+}
+
+.arrow {
+  float: right;
+  margin:10px 20px 0 50px;
+}
+
+.upArrow {
+  transform: scaleY(-1);
+}
+
+hr {
+  border-top: none;
+  border-left: none;
+  width: 350px;
+  margin-top: 15px;
+}
+
+.active {
+  font-weight: 700;
+  color: rgb(29, 30, 53);
+}
+
+.query p:first-child:hover {
+  color: rgb(244, 124, 87);
+}
+
+.answer {
+  margin: 0;
+  max-height: 0;
+  width: 320px;
+  overflow: hidden;
+  color: rgb(120, 120, 135);
+  transition: max-height 0.2s ease-out;
+}
+/* -----------------------------Mobile size L---------------------------------*/
+@media (max-width:425px) {
+  body{
+    height: auto;
+  }
+  .container {
+    width: 300px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 200px auto;
+  }
+
+  .box {
+ display: none;
+ }
+
+ .bg-pattern {
+  display: none;
+ }
+
+ .bg-pattern-mobile{
+   position: relative;
+   width:200px;
+   top:-150px;
+   left:50px;
+
+ }
+ .mobile-desktop{
+   display:block;
+   position: relative;
+   width:200px;
+   top:-90px;
+   left:50px;
+ }
+ .desktop {
+   display: none;
+ }
+  .image {
+    height: 100px;
+    overflow: visible;
+  }
+
+  .content {
+    margin: 0 20px;
+  }
+
+  .query {
+    margin: 10px 20px 10px 0;
+    width: 270px;
+  }
+  .query p:first-child:hover {
+    color:rgb(74, 75, 94);
+  }
+  .title {
+    text-align: center;
+  }
+
+  .arrow {
+    float: right;
+    margin: 5px 10px 0;
+  }
+
+  hr {
+    border-top: none;
+    width: 256px;
+    margin: 10px 0 10px;
+  }
+
+  .answer {
+    width: 250px;
+  }
+}
